@@ -1,0 +1,66 @@
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1800px; /* ou la largeur que tu souhaites */
+    margin: auto;
+  }
+  
+  .carousel {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+  }
+  
+  .carousel img {
+    scroll-snap-align: center;
+    flex: none;
+    width: 100px; /* taille des images non sélectionnées */
+    height: 150px;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel img.selected {
+    transform: scale(1.5); /* l'image sélectionnée sera 50% plus grande */
+  }
+  
+  .highlighted-mascot img {
+    width: 400px; /* ou la taille que tu souhaites pour l'image mise en avant */
+    height: auto;
+  }
+  
+  .carousel-controls {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    button {
+      display: none;
+    }
+    a {
+        margin-left: 600%;
+        font-size: 30px;
+        color: black;
+        padding: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: white;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
+
+    }
+  }
+  

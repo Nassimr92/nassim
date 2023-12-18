@@ -1,0 +1,584 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.choixmascotte {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+.choixmascotte .mascotte {
+  background-color: rgb(176, 176, 176);
+  height: 280px;
+  border-radius: 30px;
+  gap: 10px;
+}
+.choixmascotte .mascotte:hover, .choixmascotte .mascotte :active {
+  background-color: #589595;
+  border: 2px solid rgba(191, 223, 223, 0.8156862745);
+}
+.choixmascotte .mascotte .mascottest {
+  width: 60%;
+}
+
+.suivant {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  padding: 20px;
+  border: 2px rgb(67, 91, 91);
+  border-radius: 25px;
+  background-color: rgb(163, 203, 203);
+}
+.suivant:hover {
+  background-color: rgb(66, 114, 114);
+  color: white;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1800px; /* ou la largeur que tu souhaites */
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+}
+
+.carousel img {
+  scroll-snap-align: center;
+  flex: none;
+  width: 100px; /* taille des images non sélectionnées */
+  height: 150px;
+  transition: transform 0.5s ease;
+}
+
+.carousel img.selected {
+  transform: scale(1.5); /* l'image sélectionnée sera 50% plus grande */
+}
+
+.highlighted-mascot img {
+  width: 400px; /* ou la taille que tu souhaites pour l'image mise en avant */
+  height: auto;
+}
+
+.carousel-controls {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.carousel-controls button {
+  display: none;
+}
+.carousel-controls a {
+  margin-left: 600%;
+  font-size: 30px;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.carousel-controls a:hover {
+  background-color: black;
+  color: white;
+}
+
+.hauts {
+  height: 80vh;
+}
+.hauts .title-hauts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hauts .link-hauts {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-right: 100px;
+  font-size: 24px;
+}
+.hauts .link-hauts a {
+  color: black;
+}
+.hauts .choix-hauts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.hauts .choix-hauts .selected-mascot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-column: 1/2;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: 2px solid black;
+  padding: 5%;
+  border-radius: 8px;
+  width: 350px;
+  height: auto;
+}
+.hauts .retour-haut {
+  font-size: 24px;
+  color: black;
+  margin-left: 10%;
+}
+
+.highlighted-haut {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: relative;
+  z-index: 2;
+}
+.highlighted-haut img {
+  position: absolute;
+  left: 318px;
+  top: 310px;
+  width: 200px;
+}
+
+.boite-haut {
+  margin-top: 3%;
+  gap: 20px;
+  display: grid;
+  grid-column: 2/3;
+  grid-template-columns: 1fr 1fr;
+}
+
+.haut-vetement {
+  width: 280px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+ 
+}
+.haut-vetement:hover {
+  background-color: rgb(179, 207, 217);
+}
+
+.bas {
+  height: 80vh;
+}
+.bas .title-bas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bas .link-bas {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-right: 100px;
+  font-size: 24px;
+}
+.bas .link-bas a {
+  color: black;
+}
+.bas .choix-bas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.bas .choix-bas .selected-mascot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: 2px solid black;
+  padding: 5%;
+  border-radius: 8px;
+  width: 350px;
+  height: auto;
+}
+.bas .choix-bas .selected-haut {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 32%;
+  margin-top: 30%;
+  padding: 5%;
+  border-radius: 8px;
+  width: 240px;
+  height: auto;
+}
+.bas .retour-bas {
+  font-size: 24px;
+  color: black;
+  margin-left: 10%;
+}
+
+.highlighted-bas {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: relative;
+  z-index: 2;
+}
+.highlighted-bas img {
+  position: absolute;
+  left: 355px;
+  top: 410px;
+  width: 150px;
+}
+
+.boite-bas {
+  margin-top: 3%;
+  gap: 20px;
+  display: grid;
+  grid-column: 2/3;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bas-vetement {
+  width: 230px;
+  padding: 5%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.bas-vetement:hover {
+  background-color: rgb(179, 207, 217);
+}
+
+.accessoire {
+  height: 80vh;
+}
+.accessoire .title-accessoire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.accessoire .link-accessoire {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-right: 100px;
+  font-size: 24px;
+}
+.accessoire .link-accessoire a {
+  color: black;
+}
+.accessoire .choix-accessoire {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.accessoire .choix-accessoire .selected-mascot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: 2px solid black;
+  padding: 5%;
+  border-radius: 8px;
+  width: 350px;
+  height: auto;
+}
+.accessoire .choix-accessoire .selected-haut {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 32%;
+  margin-top: 30%;
+  padding: 5%;
+  border-radius: 8px;
+  width: 240px;
+  height: auto;
+}
+.accessoire .choix-accessoire .selected-bas {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 40%;
+  margin-top: 45%;
+  padding: 5%;
+  border-radius: 8px;
+  width: 100px;
+  height: auto;
+}
+.accessoire .retour-accessoire {
+  font-size: 24px;
+  color: black;
+  margin-left: 10%;
+}
+
+.highlighted-accessoire {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: relative;
+  z-index: 2;
+}
+.highlighted-accessoire img {
+  position: absolute;
+  left: 215px;
+  top: 370px;
+  width: 200px;
+}
+
+.boite-accessoire {
+  margin-top: 3%;
+  gap: 20px;
+  display: grid;
+  grid-column: 2/3;
+  grid-template-columns: 1fr 1fr;
+}
+
+.accessoire-vetement {
+  width: 230px;
+  padding: 5%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.accessoire-vetement:hover {
+  background-color: rgb(179, 207, 217);
+}
+
+.nom {
+  height: 80vh;
+}
+.nom .title-nom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nom .link-nom {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-right: 100px;
+  font-size: 24px;
+}
+.nom .link-nom a {
+  color: black;
+}
+.nom .choix-nom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.nom .choix-nom .mascotte_rendu {
+  position: relative;
+  z-index: 1;
+  display: grid;
+}
+.nom .choix-nom .mascotte_rendu .selected-mascot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 25%;
+  margin-top: 10%;
+  padding: 5%;
+  border-radius: 8px;
+  width: 350px;
+  height: auto;
+}
+.nom .choix-nom .mascotte_rendu .selected-haut {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 32%;
+  margin-top: 30%;
+  padding: 5%;
+  border-radius: 8px;
+  width: 240px;
+  height: auto;
+}
+.nom .choix-nom .mascotte_rendu .selected-bas {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 37%;
+  margin-top: 50%;
+  padding: 5%;
+  border-radius: 8px;
+  width: 150px;
+  height: auto;
+}
+.nom .choix-nom .mascotte_rendu .selected-accessoire {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 25%;
+  margin-top: 45%;
+  padding: 5%;
+  border-radius: 8px;
+  width: 150px;
+  height: auto;
+}
+.nom .retour-nom {
+  font-size: 24px;
+  color: black;
+  margin-left: 10%;
+}
+
+.input-nom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-nom input {
+  width: 500px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid black;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.expo-mascotte {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 10%;
+}
+.expo-mascotte .expo-solo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: 5%;
+}
+.expo-mascotte .expo-solo img {
+  width: 100%;
+}
+.expo-mascotte .expo-solo h2 {
+  font-size: 24px;
+  margin: 5% 0;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+.index img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(7px) brightness(50%);
+}
+.index .bienvenue {
+  position: absolute;
+  top: 425px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+.index .bienvenue h1 {
+  text-align: center;
+  font-size: 120px;
+  margin-inline: 100px;
+}
+.index .bienvenue h2 {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 90px;
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-stroke: 2px black;
+}
+.index .bienvenue button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  height: 150px;
+  font-size: 90px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.index .bienvenue button a {
+  text-decoration: none;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+    .choixmascotte {
+        grid-template-columns: repeat(3, 1fr); /* Moins de colonnes pour les petits écrans */
+    }
+
+    .hauts .choix-hauts, .bas .choix-bas, .accessoire .choix-accessoire {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    }
+
+    .haut-vetement, .bas-vetement, .accessoire-vetement {
+        width: 100%; /* Pleine largeur pour les petits écrans */
+    }
+
+    .input-nom input {
+        width: 90%; /* Largeur réduite pour les petits écrans */
+    }
+
+    .index .bienvenue h1 {
+        font-size: 60px; /* Taille de police plus petite */
+    }
+
+    .index .bienvenue h2 {
+        font-size: 45px; /* Taille de police plus petite */
+    }
+
+    .index .bienvenue button {
+        width: 300px; /* Bouton plus petit */
+        height: 100px;
+        font-size: 45px;
+    }
+  }
+/*# sourceMappingURL=style.css.map */

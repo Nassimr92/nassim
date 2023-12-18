@@ -1,0 +1,78 @@
+@use "scss/abstracts/variables.scss" as *;
+@use "scss/base/typography.scss" as *;
+@use "scss/components/choix.scss" as *;
+@use "scss/components/nom.scss" as *;
+@use "scss/components/partage.scss" as *;
+@use "scss/components/personnalisation.scss" as *;
+
+@import 'accueil.scss';
+@import 'hauts.scss';
+@import 'bas.scss';
+@import 'accessoire.scss';
+@import 'nomme.scss';
+@import 'galerie.scss';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font1;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  color: $white;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(7px) brightness(50%);
+  }
+  .bienvenue {
+    position: absolute;
+    top: 425px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding-top: 50px;
+    padding-bottom: 200px;
+
+    h1 {
+      text-align: center;
+      font-size: $size-title;
+      margin-inline: 100px;
+    }
+
+    h2 {
+      text-align: center;
+      padding-top: 30px;
+      font-size: $size-subtitle;
+      -webkit-text-fill-color: $white;
+      -webkit-text-stroke: 2px black;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 450px;
+      height: 150px;
+      font-size: $size-subtitle;
+      border-radius: 20px;
+      margin: 0 auto;
+      margin-top: 70px;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+}

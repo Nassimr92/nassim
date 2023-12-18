@@ -1,0 +1,102 @@
+.bas {
+    height: 80vh;
+    .title-bas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .link-bas{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        margin-right: 100px;
+        font-size: 24px;
+
+        a {
+            color: black;
+        }
+    }
+
+    .choix-bas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+        .selected-mascot {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            margin-left: 25%;
+            margin-top: 10%;
+            border: 2px solid black;
+            padding: 5%;
+            border-radius: 8px;
+            width: 350px;
+            height: auto;
+
+        }
+
+        .selected-haut {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            margin-left: 32%;
+            margin-top: 30%;
+            padding: 5%;
+            border-radius: 8px;
+            width: 240px;
+            height: auto;
+        }
+    }
+
+    .retour-bas {
+        font-size: 24px;
+        color: black;
+        margin-left: 10%;
+    }
+
+}
+
+.highlighted-bas{
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    z-index: 2;
+    img {
+        position: absolute;
+        left: 355px;
+        top: 410px;
+        width: 150px;
+    }
+}
+
+.boite-bas {
+    margin-top: 3%;
+    gap: 20px;
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: 1fr 1fr;
+
+    
+}
+
+.bas-vetement {
+    width: 230px;
+    padding: 5%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(179, 207, 217);
+    }
+}
+

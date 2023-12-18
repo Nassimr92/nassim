@@ -1,0 +1,116 @@
+.nom {
+    height: 80vh;
+    .title-nom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .link-nom{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        margin-right: 100px;
+        font-size: 24px;
+
+        a {
+            color: black;
+        }
+    }
+
+    .choix-nom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+        .mascotte_rendu{
+            position: relative;
+            z-index: 1;
+            display: grid;
+            .selected-mascot {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                margin-left: 25%;
+                margin-top: 10%;
+                padding: 5%;
+                border-radius: 8px;
+                width: 350px;
+                height: auto;
+    
+            }
+    
+            .selected-haut {
+                position: relative;
+                z-index: 2;
+                display: grid;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                margin-left: 32%;
+                margin-top: 30%;
+                padding: 5%;
+                border-radius: 8px;
+                width: 240px;
+                height: auto;
+            }
+    
+            .selected-bas {
+                position: relative;
+                z-index: 2;
+                display: grid;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                margin-left: 37%;
+                margin-top: 50%;
+                padding: 5%;
+                border-radius: 8px;
+                width: 150px;
+                height: auto;
+            }
+            .selected-accessoire {
+                position: relative;
+                z-index: 2;
+                display: grid;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                margin-left: 25%;
+                margin-top: 45%;
+                padding: 5%;
+                border-radius: 8px;
+                width: 150px;
+                height: auto;
+            }
+
+
+        }
+        
+    }
+
+    .retour-nom {
+        font-size: 24px;
+        color: black;
+        margin-left: 10%;
+    }
+
+}
+
+
+
+.input-nom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    input {
+        width: 500px;
+        height: 50px;
+        border-radius: 8px;
+        border: 2px solid black;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
